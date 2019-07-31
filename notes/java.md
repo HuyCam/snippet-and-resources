@@ -38,4 +38,4 @@ for (int i = 1; i < 50; i += 2)
     li.add(Integer.valueOf(i));
 ```
 ***Iteger.valueOf(i)*** convert a integer to a Class of Integer.
-***someInteger.intValue() / 2*** will get the value of that integer but you can also write as ***someInteger / 2****. This is called unboxing.
+***someInteger.intValue() / 2*** will get the value of that integer but you can also write as ***someInteger / 2***. This is called unboxing.
