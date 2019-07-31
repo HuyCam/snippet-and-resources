@@ -39,3 +39,9 @@ for (int i = 1; i < 50; i += 2)
 ```
 ***Iteger.valueOf(i)*** convert a integer to a Class of Integer.
 ***someInteger.intValue() / 2*** will get the value of that integer but you can also write as ***someInteger / 2***. This is called unboxing.
+
+# Comparison in Java
+Java do shallow comparison by default which check if two object refer to the same object. To make more sophisticate comparison. You need to override equals function
+
+# Override equals and hashCode for indexOf()
+When you run **indexOf()**, it will run **equal()** to compare two object. So when you have custom type object, it is best to override **equal()** and **hashCode()** methods. Even though indexOf don't use **hashCode()** but it is recommanded to override it too to avoid later unwanted bug.
