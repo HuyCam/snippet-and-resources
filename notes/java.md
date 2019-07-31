@@ -23,3 +23,19 @@ names.remove(3);
 ```java
 names.indexOf("huy");
 ```
+## Autoboxing and unboxing
+Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their coresponding object wrapper classes. For example, converting an int to an Integer, a double to a Double and so on. If the conversion goes the other way, this is called unboxing.
+Example of autoboxing: `Character ch = 'a';`
+```java
+List<Integer> li = new ArrayList<>();
+for (int i = 1; i < 50; i += 2)
+    li.add(i);
+```
+is equal to
+```
+List<Integer> li = new ArrayList<>();
+for (int i = 1; i < 50; i += 2)
+    li.add(Integer.valueOf(i));
+```
+***Iteger.valueOf(i)*** convert a integer to a Class of Integer.
+***someInteger.intValue() / 2*** will get the value of that integer but you can also write as ***someInteger / 2****. This is called unboxing.
