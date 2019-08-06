@@ -6,6 +6,5 @@
 3. Re add everything
 ``` git add . ```
 4. Commit and push it to remote repos.
-``` git commit -m ".gitignore fix"
-git push origin master
-```
+``` git commit -m ".gitignore fix"```
+5. Push it to the remote repos:```git push origin master```
