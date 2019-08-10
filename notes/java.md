@@ -46,6 +46,14 @@ Java do shallow comparison by default which check if two object refer to the sam
 ## Override equals and hashCode for indexOf()
 When you run **indexOf()**, it will run **equal()** to compare two object. So when you have custom type object, it is best to override **equal()** and **hashCode()** methods. Even though indexOf don't use **hashCode()** but it is recommanded to override it too to avoid later unwanted bug.
 
+## ArrayList and LinkedList difference
+| ArrayList                 | LinkedList        |
+|---------------------------|-------------------|
+|Internally uses a **dynamic array** to store the elements| Internally uses a **doubly linked list** to store the elements | 
+|Manipulation with ArrayList is **slow** because it internally uses an array. If any element is removed from the array, all the bits are shifted in the memory| Manipulation with LinkedList is **faster** than ArrayList because it uses a doubly linkedlist, so no bit shifting is required in memory|
+|An ArrayList class can **act as a list** only becuase it implements List only|LinkedList class can **act as a list and queue** both because it implements List and Deque interfaces|
+|ArrayList is **better for storing and accessing** data|LinkedList is **better for manipulating** data|
+
 ## Inner Class
 Inner class is class that reside inside an outer class. Inner class can use outer class properties and methods no matter if those methods and properties are private. If there is a variable name in a inner class that is the same as its outer class. That variable will shawdow the outer class variable.
 ```java
@@ -86,3 +94,11 @@ Gearbox mcLaren = new Gearbox(6);
 ```
 
 Notice the **mcLaren.new** synstax to create new Gear.
+
+
+## Interface and Abstract Class
+| Interfaces        | Abstract Class        |
+|-------------------|-----------------------|
+|Variable is public static final which is a constant value that will never change. Because we can not instantia| Can have member variables that are inherited, something that can't be done in the **interface**|
+|All method in the interface is implicitly public | Methods in class can have private, protected, etc|
+|Can not have implementation of methods| Can have implementation of methods |
