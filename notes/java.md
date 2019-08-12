@@ -102,3 +102,9 @@ Notice the **mcLaren.new** synstax to create new Gear.
 |Variable is public static final which is a constant value that will never change. Because we can not instantia| Can have member variables that are inherited, something that can't be done in the **interface**|
 |All method in the interface is implicitly public | Methods in class can have private, protected, etc|
 |Can not have implementation of methods| Can have implementation of methods |
+
+## Access modifier in Java
+### Final
+Final goes with class meaning that class can not be inherited.
+Final goes with a method meaning that method can not be overridden.
+Final goes with a member variable => that variable is constant.
