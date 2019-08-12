@@ -108,3 +108,14 @@ Notice the **mcLaren.new** synstax to create new Gear.
 Final goes with class meaning that class can not be inherited.
 Final goes with a method meaning that method can not be overridden.
 Final goes with a member variable => that variable is constant.
+
+### Protected
+A member specified as **protected** is accessible within its package and to all subclasses, including subclasses in other packages.
+
+|                 | Private Member | Default Member | Protected Member | Public Member|
+|-----------------|----------------|----------------|------------------|--------------|
+|Visible within same class|Yes|Yes|Yes|Yes|
+|Visible within same package by subclass|No|Yes|Yes|Yes|
+|Visible within same package by non-subclass|No|Yes|Yes|Yes|
+|Visible within different package by subclass|No|No|Yes|Yes|
+|Visible within different package by non-subclass|No|No|No|Yes|
