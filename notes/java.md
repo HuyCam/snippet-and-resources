@@ -163,4 +163,20 @@ public class Team<T extends Player & Coach & Manager> {
     }
 ```
 **NOTE**: As of the rule, you can only extends one **class** or **abstract class** and multiple **Interface**
+
+**NOTE**: Java compiler does not actually create different version of Gen, or of any other generic class. Instead, the compiler removes all generic type information, substituting the necessary casts, to make your code behave as if a specific version of Gen was created.
+
+The process of removing generic type information is called _erasure_
+
+The letter **T** is actually just a identifier, you can use another identifier you want. But commonly is **V** or **E**
+
+You can declare more than onetype parameter in a generic type
+```java
+class TwoGen<T, V>{
+    ...
 }
+```
+Then to instantiate a class from it:
+```java
+TwoGen<Integer, String> tgObj = new TwoGen<Integer, String>(88, "Generics");
+```
