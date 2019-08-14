@@ -119,3 +119,48 @@ A member specified as **protected** is accessible within its package and to all 
 |Visible within same package by non-subclass|No|Yes|Yes|Yes|
 |Visible within different package by subclass|No|No|Yes|Yes|
 |Visible within different package by non-subclass|No|No|No|Yes|
+
+
+## Java Generics
+You can declare a type a specific class can accept in their member variable by specifying the <T> in the class blue print
+```java
+public class Team<T extends Player>{
+    private String name;
+    int played = 0;
+    int won = 0;
+    int lost = 0;
+    int tied = 0;
+
+    private ArrayList<T> members = new ArrayList<>();
+
+    public Team(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean addPlayer(T player) {
+        if (members.contains(player)) {
+            System.out.println( player.getName() + " is already on this team");
+            return false;
+        } else {
+            members.add(player);
+            System.out.println( player.getName() + " picked for team " + this.name);
+            return true;
+        }
+    }
+```
+**NOTE**: Note that the method addPlayer signature has T type too. This means that the letter T will be replace by the actual type whenever you instantiate that class. Ex:
+```java
+Team<FootballPlayer> adelaideCrows = new Team<>("Adelaide Crows");
+```
+Also, you can **extends** the type of that class to only accept a certain class type:
+```java
+public class Team<T extends Player & Coach & Manager> {
+    ...
+    }
+```
+**NOTE**: As of the rule, you can only extends one **class** or **abstract class** and multiple **Interface**
+}
