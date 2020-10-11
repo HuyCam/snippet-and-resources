@@ -32,7 +32,7 @@ public DogsService(){
 System.out.println("DogsService no-arg constructor called");
 
 }
-
+// this is the constructor we're talking about
 @Autowired
 
 public DogsService(DogsDao dao)  {
